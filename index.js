@@ -1,29 +1,4 @@
-var http = require("http");
-http.createServer(function(req,res) {
-
-  var path = req.url.toLocaleLowerCase();
-
-  switch(path){
-    case"/":
-      res.writeHead(200, {'Content-Type': 'text/plain'});
-      res.end('Home Page');
-    break;
-
-    case"/about":
-      res.writeHead(200, {'Content-Type': 'text/plain'});
-      res.end('About Page');
-    break;
-
-    default:
-      res.writeHead(200, {'Content-Type': 'text/plain'});
-      res.end('Not Found');
-    break;
-      
-     
-  }
-
-
-  
-
-
-}).listen(process.env.PORT || 3000);
+var Calculator = require("./Calculator.js");//.js is optional
+var calc = new Calculator();
+let result = calc.divide(6,3);
+console.log(result);

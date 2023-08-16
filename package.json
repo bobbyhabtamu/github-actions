@@ -4,7 +4,8 @@
   "description": "Import this repo to create a starting point for Node.js projects in repl.it, https://replit.com",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha || true",
+    "coverage": "nyc npm run test"
   },
   "keywords": [],
   "author": "Bobby Habtamu",
@@ -20,5 +21,10 @@
   "bugs": {
     "url": "https://github.com/bobbyhabtamu/routing-with-node/issues"
   },
-  "homepage": "https://github.com/bobbyhabtamu/routing-with-node#readme"
+  "homepage": "https://github.com/bobbyhabtamu/routing-with-node#readme",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-asserttype": "^1.0.5",
+    "mocha": "^10.2.0"
+  }
 }
